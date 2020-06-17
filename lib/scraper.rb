@@ -10,18 +10,17 @@ class Scraper
     student_index_array = []
 
     doc.css(".student-card").map do |student|
-      name 
-      student_index_array.push({
-        name: student.css("h4.student-name").text,
-        location: student.css("p.student-location").text,
-        profile_url: "https://learn-co-curriculum.github.io/student-scraper-test-page/students/#{student.css("a").attribute("href").value}"})
-    end
-    student_index_array
-  end
+      student_name = student.css("h4.student-name").text
+      student_location = student.css("p.student-location").text
+      student_profile_url = "https://learn-co-cirriculum.github.io/student-scraper-test-page/students/#{student.css("a").attribute("href").value}"
+      student_index_array.push({name => student_name, location => student_location, profile_url => student_profile_url})
+    end 
+    student_index_array 
+  end 
 
-  def self.scrape_profile_page(profile_url)
+  def self.scrape_profile_page(profile_url) 
     
-  end
+  end 
 
-end
+end 
 
