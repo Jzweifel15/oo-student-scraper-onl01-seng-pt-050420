@@ -15,7 +15,7 @@ class Scraper
       students_hash.push(hash)
     end
     students_hash
-  end	  end
+  end
 
   def self.scrape_profile_page(profile_url)
     
