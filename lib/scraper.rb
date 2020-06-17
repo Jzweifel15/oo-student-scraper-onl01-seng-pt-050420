@@ -9,13 +9,13 @@ class Scraper
 
     students = []
 
-    doc.css("div.student-card").each do |student|
+    doc.css(".student-card").each do |student|
       students.push({
         name: student.css("h4.student-name").text, 
         location: student.css("p.student-location").text, profile_url: "http://students.learn.co/#{student.css("a").attribute("href").value}"})
     end
-    scraped_students
-  end	  end
+    students
+  end
 
   def self.scrape_profile_page(profile_url)
     
