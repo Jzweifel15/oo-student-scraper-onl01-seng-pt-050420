@@ -10,7 +10,7 @@ class Scraper
       hash = {
         name: student.css("h4.student-name").text,
         location: student.css("p.student-location").text,
-        profile_url: "http://students.learn.co/" + student.css("a").attribute("href")
+        profile_url: "https://students.learn.co/" + student.css("a").attribute("href")
       }
       students_hash.push(hash)
     end
