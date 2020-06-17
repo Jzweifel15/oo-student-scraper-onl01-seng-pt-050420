@@ -13,7 +13,7 @@ class Scraper
       student_index_array.push({
         location: student.css("p.student-location").text,
         name: student.css("h4.student-name").text,
-        profile_url: "/students/students/#{student.css("a").attribute("href").value}"})
+        profile_url: "https://learn-co-curriculum.github.io/student-scraper-test-page/students/#{student.css("a").attribute("href").value}"})
     end
     student_index_array
   end
