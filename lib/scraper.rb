@@ -9,7 +9,7 @@ class Scraper
 
     student_index_array = []
 
-    doc.css(".student-card").each do |student|
+    doc.css(".student-card").map do |student|
       student_index_array.push({
         name: student.css("h4.student-name").text,
         location: student.css("p.student-location").text,
