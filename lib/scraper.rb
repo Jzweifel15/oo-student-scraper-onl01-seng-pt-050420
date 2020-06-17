@@ -11,8 +11,9 @@ class Scraper
 
     doc.css(".student-card").each do |student|
       student_index_array.push({
-        name: student.css("h4.student-name").text, 
-        location: student.css("p.student-location").text, profile_url: "https://learn-co-curriculum.github.io/student-scraper-test-page/students/#{student.css("a").attribute("href").value}"})
+        location: student.css("p.student-location").text,
+        name: student.css("h4.student-name").text,
+        profile_url: "https://learn-co-curriculum.github.io/student-scraper-test-page/students/#{student.css("a").attribute("href").value}"})
     end
     student_index_array
   end
